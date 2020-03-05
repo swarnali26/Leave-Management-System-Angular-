@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row mt-3 mb-3">
+    <div class="col-md-6 mx-auto">
+<div class="card-header card text-white bg-secondary">
+    <h4>LOGIN</h4>
+</div>
+<div class="card card-body bg-light">
+  <form [formGroup]="loginform" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label>EMAIL</label>
+          <input type="email" name="email" class="form-control" formControlName="email">
+          <span class="text-danger"
+            [hidden]="!(loginform.get('email').touched && loginform.get('email').errors?.required)">
+            Email is required!!
+          </span>
+          </div>
+          <div class="form-group">
+            <label>PASSWORD</label>
+            <input type="password"  name="password" class="form-control" formControlName="password">
+            <span class="text-danger"
+            [hidden]="!(loginform.get('password').touched && loginform.get('password').errors?.required)">
+            Password is required!!
+          </span>
+          </div>
+          <button type="submit" class="btn btn-outline-success">LOGIN</button>
+      </form>
+</div>
+</div>
+</div>
+</div>
