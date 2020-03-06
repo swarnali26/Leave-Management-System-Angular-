@@ -4,6 +4,7 @@ import { Injectable } from '@angular/core';
 import { TaskService } from 'src/app/service/task.service';
 import { FormsModule } from '@angular/forms';
 import {passwordValidation} from 'src/app/components/registration/registration.validation'
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-registration',
   templateUrl: './registration.component.html',
@@ -20,7 +21,7 @@ export class RegistrationComponent implements OnInit {
     phone: new FormControl('', [Validators.required,Validators.minLength(10),Validators.maxLength(10),Validators.pattern("^[0-9]*$")]),
   });
 
-  constructor(private formService: TaskService) { }
+  constructor(private formService: TaskService,private router : Router) { }
   onSubmit() {
     //console.warn(this.Registrationform.value);
     this.formService.senddata(this.Registrationform.value.firstname, this.Registrationform.value.lastname,
@@ -29,8 +30,12 @@ export class RegistrationComponent implements OnInit {
       .subscribe(response => console.log(response),
         error => console.log(error)
       );
+      this.router.navigate(['/loginform']);
     console.warn(this.Registrationform.value);
+    
   }
+  
+  
 
 
   ngOnInit(): void {

@@ -9,19 +9,26 @@ import { RegistrationComponent } from './components/registration/registration.co
 import { HttpClientModule }    from '@angular/common/http';
 import {ReactiveFormsModule}  from '@angular/forms';
 import {FormsModule} from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { EmployeeComponent } from './components/employee/employee.component';
+import { AdminComponent } from './components/admin/admin.component';
 @NgModule({
   declarations: [
     AppComponent,
     
     routingComponents,
-    RegistrationComponent
+    RegistrationComponent,
+    EmployeeComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    RouterModule,
+     
     
   ],
   providers: [],

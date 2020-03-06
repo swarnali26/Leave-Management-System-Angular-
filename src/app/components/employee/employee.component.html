@@ -1,0 +1,66 @@
+<div class="container">
+  <div class="logout">
+    <button (click)="logout()">logout</button>
+</div>
+<table style="width:30%">
+            
+  <tr>
+       <th>leave id</th>
+      <th>No. of days</th>
+  </tr>
+  <tr *ngFor="let detail of show[0]">
+    <td>{{detail.leaveid}}</td>  
+    <td>{{detail.days}}</td>
+    <tr>
+</table>
+
+
+    <div class="row mt-3 mb-3">
+      <div class="col-md-6 mx-auto">
+  <div class="card-header card text-white bg-secondary">
+      <h4>APPLY FOR LEAVE</h4>
+  </div>
+  <div class="card card-body bg-light">
+    <form [formGroup]="leaveform" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label>LEAVE REASON</label>
+            <input type="text" name="text" class="form-control"formControlName="reason">
+            <span class="text-danger"
+            [hidden]="!(leaveform.get('reason').touched && leaveform.get('reason').errors?.required)">
+            Please enter your reason!!
+          </span>
+            </div>
+            <div class="form-group">
+              <label>LEAVE DAYS</label>
+              <input type="text"  name="days" class="form-control" formControlName="days">
+              <span class="text-danger"
+            [hidden]="!(leaveform.get('days').touched && leaveform.get('days').errors?.required)">
+            Mention the number of days!!
+          </span>
+            </div>
+            <div class="form-group">
+                <label>From</label>
+                <input type="date"  name="days" class="form-control" formControlName="from">
+                <span class="text-danger"
+            [hidden]="!(leaveform.get('from').touched && leaveform.get('from').errors?.required)">
+            Field is required!!
+          </span>
+              </div>
+              <div class="form-group">
+                <label>TO</label>
+                <input type="date"  name="days" class="form-control" formControlName="to">
+                <span class="text-danger"
+            [hidden]="!(leaveform.get('to').touched && leaveform.get('to').errors?.required)">
+            Field is required!!
+          </span>
+              </div>
+            <button type="submit" class="btn btn-outline-success" [disabled]="!leaveform.valid">APPLY</button>
+        </form>
+        
+
+  </div>
+  </div>
+  </div>
+  </div>
+  
+  
