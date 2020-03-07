@@ -21,15 +21,15 @@ export class EmployeeComponent implements OnInit {
   });
   show=[];
   constructor(private leaveService:TaskService,private router : Router) {
-    this.leaveService.admin().subscribe(show => {
+    this.leaveService.employee(this.leaveform.value.reason,this.leaveform.value.days,this.leaveform.value.from,this.leaveform.value.to).subscribe(show => {
       console.log(show)
       this.show.push(show);
     }, error => console.log(error));
 
    }
-   logout()
+   back()
   {
-    this.router.navigate(['/']);
+    this.router.navigate(['employee']);
   }
   onSubmit()
   {

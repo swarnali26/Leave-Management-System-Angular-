@@ -1,3 +1,11 @@
+#Baseurl for Leave Management System
+http://localhost:4200/header
+
+#for admin login
+email: swarnali.marik@gmail.com
+password:admin
+
+
 # Angular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.3.

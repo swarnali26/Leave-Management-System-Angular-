@@ -1,0 +1,33 @@
+<app-sidenavadmin></app-sidenavadmin>
+<div class="container">
+<table style="width:100%">
+    <div class="row mt-3 mb-3">
+        <div class="col-md-7 mx-auto">
+          <div class="card-header card text-white bg-secondary">
+              <div class="heading">
+                  <h4>EMPLOYEE DETAIL</h4>
+              </div>
+          </div>
+        
+          
+            <tr>
+                
+                <th>FIRSTNAME</th>
+                <th>LASTNAME</th>
+                <th>EMAIL</th>
+                <th>PHONE NO.</th>
+                
+            </tr>
+          
+
+            <tr *ngFor="let detail of show[0]">
+              <td>{{detail.firstname}}</td>  
+              <td>{{detail.lastname}}</td>
+                <td>{{detail.email}}</td>
+                <td>{{detail.phone}}</td>
+                     
+            </tr>
+            </div>
+            </div>
+        </table>
+        </div>

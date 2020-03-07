@@ -8,11 +8,12 @@ table {
     border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
+    width: 200px;
     text-align: center;
-    width:200px;
   }
   
   tr:nth-child(even) {
+      
     background-color: #dddddd;
   }
   .logout{
@@ -25,12 +26,13 @@ table {
 }*/
 .heading
   {
-    text-align: center;
   margin-left: 3%;
   padding-top: 1%;
+  text-align: center;
   }
   .container{
-    margin-left: 20%;
+      margin-left: 30%;
+      margin-top: 5%;
   }
 
   

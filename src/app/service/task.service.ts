@@ -21,7 +21,7 @@ export class TaskService {
   }
   employee(reason:string,days:string,from:Date,to:Date)
   {
-    return this.httpclient.post('http://localhost:8000/api/employee',{reason:reason,days:days,from:from,to:to},
+    return this.httpclient.post('http://localhost:8000/api/leave',{reason:reason,days:days,from:from,to:to},
     {
       headers:new HttpHeaders({'token':window.localStorage.getItem('token')})
     });
@@ -29,7 +29,21 @@ export class TaskService {
   }
 admin()
 {
-  return this.httpclient.get('http://localhost:8000/api/leave',
+  return this.httpclient.get('http://localhost:8000/api/check',
+  {
+    headers:new HttpHeaders({'token':window.localStorage.getItem('token')})
+  });
+}
+view()
+{
+  return this.httpclient.get('http://localhost:8000/api/view',
+  {
+    headers:new HttpHeaders({'token':window.localStorage.getItem('token')})
+  });
+}
+myleave()
+{
+  return this.httpclient.get('http://localhost:8000/api/myleave',
   {
     headers:new HttpHeaders({'token':window.localStorage.getItem('token')})
   });

@@ -8,8 +8,8 @@ table {
     border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
+    width: 250px;
     text-align: center;
-    width:200px;
   }
   
   tr:nth-child(even) {
@@ -29,8 +29,7 @@ table {
   margin-left: 3%;
   padding-top: 1%;
   }
-  .container{
-    margin-left: 20%;
-  }
-
+.container{
+  margin-left: 19%;
+}
   

@@ -15,13 +15,12 @@ export class AdminComponent implements OnInit {
       this.show.push(show);
     }, error => console.log(error));
    }
-  logout()
-  {
-    this.router.navigate(['/']);
-  }
-   employeeDetails(id: number){
-    this.router.navigate(['view', id]);
-  }
+  
+   employeeDetails(id)
+     {
+       console.log(id);
+    //this.router.navigate(['view', id]);
+     }
   
 
   ngOnInit() {

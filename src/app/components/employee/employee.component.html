@@ -1,20 +1,6 @@
+<app-sidenavuser></app-sidenavuser>
 <div class="container">
-  <div class="logout">
-    <button (click)="logout()">logout</button>
-</div>
-<table style="width:30%">
-            
-  <tr>
-       <th>leave id</th>
-      <th>No. of days</th>
-  </tr>
-  <tr *ngFor="let detail of show[0]">
-    <td>{{detail.leaveid}}</td>  
-    <td>{{detail.days}}</td>
-    <tr>
-</table>
-
-
+  
     <div class="row mt-3 mb-3">
       <div class="col-md-6 mx-auto">
   <div class="card-header card text-white bg-secondary">
@@ -54,13 +40,18 @@
             Field is required!!
           </span>
               </div>
-            <button type="submit" class="btn btn-outline-success" [disabled]="!leaveform.valid">APPLY</button>
+            <button type="submit" class="btn btn-outline-success" [disabled]="!leaveform.valid" (click)="back()">APPLY</button>
         </form>
+        <br>
+        
         
 
   </div>
   </div>
+  
+  
   </div>
+  
   </div>
   
   

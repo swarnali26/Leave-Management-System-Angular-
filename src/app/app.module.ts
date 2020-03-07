@@ -12,6 +12,11 @@ import {FormsModule} from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { EmployeeComponent } from './components/employee/employee.component';
 import { AdminComponent } from './components/admin/admin.component';
+import { ViewComponent } from './view/view.component';
+import { SidenavadminComponent } from './sidenavadmin/sidenavadmin.component';
+import { HomeComponent } from './home/home.component';
+import { SidenavuserComponent } from './sidenavuser/sidenavuser.component';
+import { MydetailsComponent } from './mydetails/mydetails.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +24,12 @@ import { AdminComponent } from './components/admin/admin.component';
     routingComponents,
     RegistrationComponent,
     EmployeeComponent,
-    AdminComponent
+    AdminComponent,
+    ViewComponent,
+    SidenavadminComponent,
+    HomeComponent,
+    SidenavuserComponent,
+    MydetailsComponent
   ],
   imports: [
     BrowserModule,
